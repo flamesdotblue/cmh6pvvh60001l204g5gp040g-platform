@@ -1,5 +1,4 @@
 import React from 'react';
-import Spline from '@splinetool/react-spline';
 import { Rocket, Star, Shield, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 import mock1 from '../assets/chilavai-mock-1.svg';
@@ -8,14 +7,14 @@ import mock2 from '../assets/chilavai-mock-2.svg';
 const Hero = () => {
   return (
     <section className="relative w-full overflow-hidden">
-      <div className="absolute inset-0">
-        <Spline scene="https://prod.spline.design/8nsoLg1te84JZcE9/scene.splinecode" style={{ width: '100%', height: '100%' }} />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/85 via-white/60 to-white" />
-        <div className="pointer-events-none absolute -left-32 -top-32 h-[28rem] w-[28rem] rounded-full bg-gradient-to-tr from-indigo-200/60 to-violet-200/60 blur-3xl" />
-        <div className="pointer-events-none absolute -right-32 -bottom-32 h-[28rem] w-[28rem] rounded-full bg-gradient-to-tr from-rose-200/60 to-amber-200/60 blur-3xl" />
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 bg-gradient-to-b from-indigo-50 via-white to-white" />
+        <div className="pointer-events-none absolute -left-28 -top-28 h-[28rem] w-[28rem] rounded-full bg-gradient-to-tr from-indigo-200/80 to-violet-200/60 blur-3xl" />
+        <div className="pointer-events-none absolute -right-28 -bottom-28 h-[28rem] w-[28rem] rounded-full bg-gradient-to-tr from-rose-200/70 to-amber-200/60 blur-3xl" />
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-indigo-100/60 to-transparent" />
       </div>
 
-      <div className="relative z-10 mx-auto grid min-h-[92vh] max-w-7xl grid-cols-1 items-center gap-12 px-6 py-16 sm:px-8 lg:grid-cols-2 lg:py-24">
+      <div className="relative z-10 mx-auto grid min-h-[90vh] max-w-7xl grid-cols-1 items-center gap-12 px-6 py-16 sm:px-8 lg:grid-cols-2 lg:py-24">
         <div>
           <motion.div
             initial={{ opacity: 0, y: 12 }}
@@ -106,7 +105,7 @@ const Hero = () => {
             <motion.img
               src={mock2}
               alt="chilavAI mobile mockup - insights"
-              className="absolute -right-16 top-24 w-40 rotate-[12deg] rounded-[1.5rem] border border-slate-200 bg-white shadow-2xl transition will-change-transform sm:w-48 lg:w-56"
+              className="absolute -right-12 top-24 w-40 rotate-[12deg] rounded-[1.5rem] border border-slate-200 bg-white shadow-2xl transition will-change-transform sm:w-48 lg:w-56"
               initial={{ opacity: 0, y: 30, rotate: 20 }}
               animate={{ opacity: 1, y: 0, rotate: 12 }}
               transition={{ duration: 0.8, ease: 'easeOut', delay: 0.4 }}
